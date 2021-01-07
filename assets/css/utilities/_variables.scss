@@ -16,7 +16,7 @@ $color__text-main: #404040;
 
 $color_main-theme: #fd6424;
 $color_text-light: #fff;
-$color_text-dark: #000;
+$color_text-dark: #444153;
 $color_dark-grey: #444153;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -27,6 +27,8 @@ $color__border-abbr: #666;
 
 /* TYPOGRAPHY */
 $font__main: sans-serif;
+$font_general: "Montserrat", sans-serif;
+$font_headers: "Teko", sans-serif;
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;

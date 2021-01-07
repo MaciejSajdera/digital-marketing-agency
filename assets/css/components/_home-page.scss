@@ -1,16 +1,50 @@
 .section-welcome {
 	height: 100vh;
-	padding-top: 18em;
+	margin-top: 5em;
 
 	display: flex;
 	flex-flow: column;
 	justify-content: flex-end;
 
 	color: $color_text-light;
+
+	.welcome-text {
+		margin-bottom: 2em;
+
+		span {
+			padding: 1em 0;
+		}
+
+		p {
+			width: 45%;
+			@include fluid-type($min_width, $max_width, 28px, 32px);
+			line-height: 1.4em;
+		}
+	}
+
+	.orange-oval-button {
+		margin-right: 1em;
+	}
+
+	.awards-promo-banner {
+		width: 80%;
+		&__logo {
+			img {
+				object-fit: contain;
+				height: 4em;
+			}
+		}
+	}
+
+	.signature {
+		text-align: center;
+		align-self: flex-end;
+		// margin-top: 6em;
+		@include fluid-type($min_width, $max_width, 14px, 16px);
+	}
 }
 
 .section-home-chat {
-	height: 70vh;
 	display: flex;
 	justify-content: flex-start;
 }
@@ -24,7 +58,6 @@
 }
 
 .section-awards-carousel {
-	height: 20vh;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -37,6 +70,14 @@
 	}
 	.swiper-wrapper {
 		transition-timing-function: linear;
+
+		.swiper-slide {
+			text-align: center;
+
+			img {
+				height: 3em;
+			}
+		}
 	}
 
 	.swiper-scrollbar {

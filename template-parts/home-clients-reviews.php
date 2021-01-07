@@ -1,7 +1,7 @@
 <section class="blog-posts home-clients-reviews">
 
 		<div class="section-header">
-            <span class="text-light">WHAT OUR</span>
+            <span class="text-light up-title">WHAT OUR</span>
             <h2 class="text-light">CLIENTS SAY</h2>
 		</div>
         
@@ -22,7 +22,7 @@
                                 echo '</div>';
 
                                 echo '<div class="client-signature">';
-                                    echo '<p class="text-colored"><strong>' . get_the_title() . '</strong><br />' . get_field("official_title") .'</p>';
+                                    echo '<p class="text-colored up-title"><strong>' . get_the_title() . '</strong><br />' . get_field("official_title") .'</p>';
                                 echo '</div>';
 
                             echo '</div>';

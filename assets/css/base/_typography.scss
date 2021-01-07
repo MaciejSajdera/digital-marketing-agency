@@ -5,7 +5,7 @@ select,
 optgroup,
 textarea {
 	color: $color__text-main;
-	font-family: $font__main;
+	font-family: $font_general;
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
@@ -19,10 +19,25 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: $font_headers;
+	font-weight: 700;
+	line-height: 0.8em;
+	@include fluid-type($min_width, $max_width, 120px, 130px);
 }
 
 h2 {
 	text-transform: uppercase;
+	font-family: $font_headers;
+	font-weight: 700;
+	@include fluid-type($min_width, $max_width, 64px, 70px);
 }
 
 /* COPY */

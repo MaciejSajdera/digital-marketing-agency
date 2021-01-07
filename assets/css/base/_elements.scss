@@ -105,6 +105,17 @@ table {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.up-title {
+	@include fluid-type($min_width, $max_width, 26px, 28px);
+	font-weight: 200;
+	text-transform: uppercase;
 }
 
 .text-colored {
@@ -121,4 +132,34 @@ table {
 
 .txt-centered {
 	text-align: center;
+}
+
+.white-oval-button {
+	background: $color_text-light;
+	color: $color_text-dark;
+	border-radius: 100rem;
+	padding: 0.5em 1.5em;
+	text-transform: uppercase;
+	font-weight: 700;
+	@include fluid-type($min_width, $max_width, 18px, 20px);
+}
+
+.white-oval-button-outline {
+	background: $color_text-light;
+	color: $color_main-theme;
+	border-radius: 100rem;
+	border: 3px solid $color_main-theme;
+	padding: 0.5em 1.5em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.orange-oval-button {
+	background: $color_main-theme;
+	color: $color_text-light;
+	border-radius: 100rem;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	font-weight: 700;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
 }

@@ -2,7 +2,12 @@
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
-	align-items: center;
+}
+
+.wrapper-flex-row-start {
+	display: flex;
+	flex-flow: row;
+	align-items: flex-start;
 }
 
 .wrapper-flex-column {
