@@ -1,5 +1,12 @@
 .section-welcome {
 	height: 100vh;
+	padding-top: 18em;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+
+	color: $color_text-light;
 }
 
 .section-home-chat {

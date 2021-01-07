@@ -112,6 +112,10 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 6em 9em;
+	width: 100%;
+
+	position: absolute;
+	top: 4em;
 
 	.site-branding {
 		width: 60%;
@@ -119,6 +123,10 @@
 
 	.main-navigation {
 		width: 40%;
+	}
+
+	a {
+		text-transform: uppercase;
 	}
 }
 
