@@ -1,0 +1,96 @@
+.section-welcome {
+	height: 100vh;
+}
+
+.section-home-chat {
+	height: 70vh;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.text-part {
+	width: 60%;
+}
+
+.video-part {
+	width: 40%;
+}
+
+.section-awards-carousel {
+	height: 20vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	.swiper-container {
+		overflow: hidden;
+		width: 100%;
+	}
+	.swiper-wrapper {
+		transition-timing-function: linear;
+	}
+
+	.swiper-scrollbar {
+		display: none;
+	}
+
+	.swiper-button-prev {
+		left: -1em;
+		display: none;
+	}
+
+	.swiper-button-next {
+		right: 1em;
+		display: none;
+	}
+}
+
+.home-clients-reviews {
+	background-color: $color_main-theme;
+
+	.single-review {
+		width: 33%;
+		margin: 1em;
+	}
+
+	.client-img {
+		height: 8em;
+		background-size: contain;
+		width: 8em;
+		border-radius: 100%;
+		margin: 1em 0;
+	}
+
+	.client-review {
+		height: 18em;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		border: 3px solid $color_text-light;
+		border-radius: 25px;
+		padding: 1.5em;
+		margin-bottom: 1em;
+		color: $color_text-light;
+
+		p:first-child {
+			height: 8em;
+		}
+
+		a {
+			align-self: flex-end;
+		}
+	}
+
+	.client-signature {
+		background-color: $color_dark-grey;
+		padding: 0 2em;
+
+		p {
+			margin-bottom: 1em;
+			margin-top: 1em;
+		}
+	}
+}

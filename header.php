@@ -25,6 +25,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
+	<div class="top-banner wrapper-flex-row">
+		<a href="" class="white-oval-button">Apply for the UK’s Best Free Audit Today Click Here</a>
+		<span>OR CALL US ON </span>
+		<a href="tel:01727298040" alt="Call YBA Now" class="white-oval-button">01727 298040</a>
+	</div>
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php

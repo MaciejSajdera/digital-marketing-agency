@@ -10,7 +10,6 @@ html {
 	box-sizing: border-box;
 }
 
-
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
@@ -41,24 +40,24 @@ figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
 
-
 /* LINKS */
 a {
 	color: $color__link;
+	text-decoration: none;
 
-	&:visited {
-		color: $color__link-visited;
-	}
+	// &:visited {
+	// 	color: $color__link-visited;
+	// }
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
+	// &:hover,
+	// &:focus,
+	// &:active {
+	// 	color: $color__link-hover;
+	// }
 
-	&:focus {
-		outline: thin dotted;
-	}
+	// &:focus {
+	// 	outline: thin dotted;
+	// }
 
 	&:hover,
 	&:active {
@@ -100,4 +99,26 @@ dd {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+.section-header {
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+}
+
+.text-colored {
+	color: $color_main-theme;
+}
+
+.text-light {
+	color: $color_text-light;
+}
+
+.text-dark {
+	color: $color_text-dark;
+}
+
+.txt-centered {
+	text-align: center;
 }

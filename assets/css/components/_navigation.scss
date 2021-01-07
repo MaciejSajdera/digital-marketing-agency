@@ -90,7 +90,6 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
@@ -106,4 +105,26 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6em 9em;
+
+	.site-branding {
+		width: 60%;
+	}
+
+	.main-navigation {
+		width: 40%;
+	}
+}
+
+.top-banner {
+	padding: 1em 6em;
+	position: fixed;
+	width: 100%;
+	background: $color_main-theme;
 }
