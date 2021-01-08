@@ -17,7 +17,7 @@ get_header();
 		?>
 
 		<?php
-			get_template_part( 'template-parts/home-chat-section', 'page' );
+			get_template_part( 'template-parts/home-help', 'page' );
 		?>
 		
 		<?php

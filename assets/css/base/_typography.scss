@@ -30,7 +30,7 @@ h1 {
 	font-family: $font_headers;
 	font-weight: 700;
 	line-height: 0.8em;
-	@include fluid-type($min_width, $max_width, 120px, 130px);
+	@include fluid-type($min_width, $max_width, 110px, 120px);
 }
 
 h2 {

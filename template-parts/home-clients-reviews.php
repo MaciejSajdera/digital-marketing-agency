@@ -7,9 +7,13 @@
         
 		<div class="wrapper-flex-row">
 					<?php
-						// query for the BLOG page
-						// displays only 3 most recent posts
-						$your_query = new WP_Query( array('pagename=blog', 'posts_per_page' => 3 ) );
+
+                        $reviews = array(
+                            'post_type'=> 'reviews'
+                        );    
+                        
+                        $your_query = new WP_Query( $reviews );
+                        
 						// "loop" through query (even though it's just one page) 
 						while ( $your_query->have_posts() ) :
 							$your_query->post_title(); $your_query->the_post();

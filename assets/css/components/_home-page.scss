@@ -1,6 +1,5 @@
 .section-welcome {
-	height: 100vh;
-	margin-top: 5em;
+	height: 105vh;
 
 	display: flex;
 	flex-flow: column;
@@ -19,7 +18,12 @@
 			width: 45%;
 			@include fluid-type($min_width, $max_width, 28px, 32px);
 			line-height: 1.4em;
+			margin-top: 0em;
 		}
+	}
+
+	.awards-promo-wrapper {
+		margin-bottom: 1.5em;
 	}
 
 	.orange-oval-button {
@@ -44,17 +48,50 @@
 	}
 }
 
-.section-home-chat {
+.section-home-help {
 	display: flex;
 	justify-content: flex-start;
+	background-size: cover;
+	background-position: center;
+
+	#myIframe {
+		iframe {
+			height: 40em;
+			width: 77em;
+		}
+	}
 }
 
 .text-part {
-	width: 60%;
+	width: 50%;
+	padding: 3em;
+
+	color: $color_text-light;
+
+	p {
+		@include fluid-type($min_width, $max_width, 20px, 24px);
+	}
+
+	.dark-oval-button {
+		width: 80%;
+	}
 }
 
 .video-part {
-	width: 40%;
+	width: 50%;
+	background-size: contain;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	#videoContainer {
+		display: block;
+		cursor: pointer;
+		width: 40em;
+		height: 40em;
+		background-size: contain;
+		background-position: center;
+	}
 }
 
 .section-awards-carousel {
@@ -63,6 +100,10 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+
+	.section-header {
+		margin-bottom: 2em;
+	}
 
 	.swiper-container {
 		overflow: hidden;

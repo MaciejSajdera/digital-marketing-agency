@@ -166,6 +166,11 @@ function defer_parsing_of_js( $url ) {
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'reviews', 'excerpt' ); //change page with your post type slug.
+}
+
 /**
  * Implement the Custom Header feature.
  */
