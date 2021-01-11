@@ -47,5 +47,17 @@
 }
 
 section {
-	padding: 4em 10em 4em 10em;
+	@media screen and (min-width: 1200px) {
+		padding: 4em 10em 4em 10em;
+	}
+}
+
+.call-us {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		margin-right: 0.5em;
+	}
 }

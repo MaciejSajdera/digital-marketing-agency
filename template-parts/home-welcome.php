@@ -12,7 +12,7 @@
             ADS PPC</h1>
             <p>Top 3% <strong>Google Premier Partner</strong> and Voted by <strong>Google as One</strong> of The Best in Europe for <strong>Growing Businesses Online.</strong></p>
         </div>
-        <div class="wrapper-flex-row-start awards-promo-wrapper">
+        <div class="wrapper-flex awards-promo-wrapper">
 
             <a class="orange-oval-button">Learn more</a>
             <div class="wrapper-flex-row awards-promo-banner">

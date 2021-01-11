@@ -147,6 +147,10 @@
 	background: $color_main-theme;
 	z-index: 999;
 	align-items: center;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
 
 	span {
 		color: $color_text-light;

@@ -1,13 +1,11 @@
-.wrapper-flex-row {
+.wrapper-flex {
 	display: flex;
-	flex-flow: row;
-	justify-content: space-around;
-}
+	flex-flow: column;
+	justify-content: center;
 
-.wrapper-flex-row-start {
-	display: flex;
-	flex-flow: row;
-	align-items: flex-start;
+	@media screen and (min-width: 1200px) {
+		flex-flow: row;
+	}
 }
 
 .wrapper-flex-column {

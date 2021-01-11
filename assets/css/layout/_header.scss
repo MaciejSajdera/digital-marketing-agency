@@ -1,0 +1,31 @@
+.apply-button {
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
+}
+
+.apply-button-short {
+	display: none;
+
+	@media screen and (min-width: 480px) and (max-width: 1024px) {
+		display: block;
+	}
+}
+
+.call-us-on {
+	display: none;
+	@media screen and (min-width: 1200px) {
+		display: block;
+	}
+}
+
+.call-us {
+	@media screen and (max-width: 1200px) {
+		background-color: $background_graphite;
+		color: $color_text-light;
+
+		svg {
+			fill: $color_text-light;
+		}
+	}
+}

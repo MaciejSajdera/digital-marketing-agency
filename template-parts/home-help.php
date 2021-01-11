@@ -7,7 +7,7 @@
 <a class="dark-oval-button" href="">We’d love to chat – Book in a call here</a>
 </div>
 
-<div class="video-part wrapper-flex-column">
+<div class="video-part">
 	<div id="videoContainer" style="background-image: url(<?php echo get_field("help_video_banner")?>); background-repeat: no-repeat">
 
 								<!-- The Modal -->	

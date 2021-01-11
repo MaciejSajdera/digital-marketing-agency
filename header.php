@@ -25,10 +25,13 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<div class="top-banner wrapper-flex-row">
-		<a href="" class="white-oval-button">Apply for the UK’s Best Free Audit Today Click Here</a>
-		<span>OR CALL US ON </span>
-		<a href="tel:01727298040" alt="Call YBA Now" class="white-oval-button">01727 298040</a>
+	<div class="top-banner">
+		<a href="" class="white-oval-button apply-button">Apply for the UK’s Best Free Audit Today Click Here</a>
+		<a href="" class="white-oval-button apply-button-short">FREE AUDIT</a>
+		<span class="call-us-on">OR CALL US ON </span>
+		<a href="tel:01727298040" alt="Call YBA Now" class="white-oval-button call-us"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+		<path d="M0 0h24v24H0z" fill="none"/><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+		 01727 298040</a>
 	</div>
 
 	<header id="masthead" class="site-header">

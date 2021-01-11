@@ -24,6 +24,9 @@
 
 	.awards-promo-wrapper {
 		margin-bottom: 1.5em;
+
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.orange-oval-button {
@@ -31,8 +34,10 @@
 	}
 
 	.awards-promo-banner {
-		width: 80%;
+		width: 85%;
+		justify-content: space-around;
 		&__logo {
+			margin: 0 1em;
 			img {
 				object-fit: contain;
 				height: 4em;
@@ -50,45 +55,57 @@
 
 .section-home-help {
 	display: flex;
+	flex-flow: column;
 	justify-content: flex-start;
 	background-size: cover;
 	background-position: center;
 
-	#myIframe {
-		iframe {
-			height: 40em;
-			width: 77em;
-		}
+	@media screen and (min-width: 1200px) {
+		flex-flow: row;
 	}
+
+	// #myIframe {
+	// 	iframe {
+	// 		height: 40em;
+	// 		width: 77em;
+	// 	}
+	// }
 }
 
 .text-part {
-	width: 50%;
 	padding: 3em;
-
 	color: $color_text-light;
+
+	@media screen and (min-width: 1200px) {
+		width: 50%;
+	}
 
 	p {
 		@include fluid-type($min_width, $max_width, 20px, 24px);
 	}
 
 	.dark-oval-button {
-		width: 80%;
+		@media screen and (min-width: 1200px) {
+			width: 80%;
+		}
 	}
 }
 
 .video-part {
-	width: 50%;
 	background-size: contain;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 
+	@media screen and (min-width: 1200px) {
+		width: 50%;
+	}
+
 	#videoContainer {
 		display: block;
 		cursor: pointer;
-		width: 40em;
-		height: 40em;
+		width: 100%;
+		height: 100%;
 		background-size: contain;
 		background-position: center;
 	}
@@ -142,6 +159,8 @@
 	.single-review {
 		width: 33%;
 		margin: 1em;
+		display: flex;
+		flex-flow: column;
 	}
 
 	.client-img {
@@ -149,7 +168,7 @@
 		background-size: contain;
 		width: 8em;
 		border-radius: 100%;
-		margin: 1em 0;
+		margin: 0 0 3em 0;
 	}
 
 	.client-review {
@@ -161,8 +180,36 @@
 		border: 3px solid $color_text-light;
 		border-radius: 25px;
 		padding: 1.5em;
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 		color: $color_text-light;
+		@include fluid-type($min_width, $max_width, 14px, 18px);
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			top: -46px;
+			border-color: transparent transparent #fff transparent;
+			border-width: 22px;
+			left: 48px;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			top: -40px;
+			border-color: transparent transparent #fd6424 transparent;
+			border-width: 20px;
+			left: 50px;
+		}
 
 		p:first-child {
 			height: 8em;
@@ -180,6 +227,77 @@
 		p {
 			margin-bottom: 1em;
 			margin-top: 1em;
+			@include fluid-type($min_width, $max_width, 14px, 18px);
+		}
+	}
+}
+
+.section-recognized {
+	background-color: $background_dark-grey;
+}
+
+.advantages-container {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1em;
+	align-items: flex-start;
+
+	padding: 2em 0 1em;
+
+	@media screen and (min-width: 992px) {
+		padding: 2em 0 0;
+	}
+
+	@media screen and (max-width: 992px) {
+		.advantage-box {
+			width: 25%;
+			padding: 0.25em;
+			img {
+				width: 30px;
+			}
+
+			.content {
+				p {
+					margin-bottom: 0.25em;
+				}
+			}
+		}
+	}
+
+	.advantage-box {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		width: 33%;
+
+		// @media screen and (min-width: 1200px) {
+		// 	flex-flow: row;
+		// }
+
+		p {
+			margin: 0.25em auto;
+			padding: 0 5em;
+			@include fluid-type($min_width, $max_width, 12px, 18px);
+			margin: 1.5em auto;
+			text-align: center;
+		}
+	}
+}
+
+.why-us-container {
+	img {
+		margin-bottom: 1.5em;
+	}
+
+	.why-us-content {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			padding: 0 2em;
 		}
 	}
 }

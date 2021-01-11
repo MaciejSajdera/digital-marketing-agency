@@ -5,7 +5,7 @@
             <h2 class="text-light">CLIENTS SAY</h2>
 		</div>
         
-		<div class="wrapper-flex-row">
+		<div class="wrapper-flex">
 					<?php
 
                         $reviews = array(
@@ -17,7 +17,7 @@
 						// "loop" through query (even though it's just one page) 
 						while ( $your_query->have_posts() ) :
 							$your_query->post_title(); $your_query->the_post();
-                            echo '<div class="single-review wrapper-flex-column">';
+                            echo '<div class="single-review">';
                                 echo '<a class="blog-post client-img" href="'. get_permalink() .'" style="background-image: url(' .get_the_post_thumbnail_url(). '); background-repeat: no-repeat;"></a>';
 
                                 echo '<div class="blog-post-caption client-review">';
@@ -26,7 +26,7 @@
                                 echo '</div>';
 
                                 echo '<div class="client-signature">';
-                                    echo '<p class="text-colored up-title"><strong>' . get_the_title() . '</strong><br />' . get_field("official_title") .'</p>';
+                                    echo '<p class="text-colored"><strong>' . get_the_title() . '</strong><br />' . get_field("official_title") .'</p>';
                                 echo '</div>';
 
                             echo '</div>';
@@ -38,7 +38,7 @@
 
 		</div>
 
-		<div class="txt-centered">
-		<a class="read-more" href=<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>>Zobacz wszystkie</a>
-		</div>
+		<!-- <div class="txt-centered">
+		<a class="read-more" href=<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>>Check out all reviews</a>
+		</div> -->
 	</section>
