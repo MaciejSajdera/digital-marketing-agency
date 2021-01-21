@@ -16,6 +16,7 @@
 	display: none;
 	@media screen and (min-width: 1200px) {
 		display: block;
+		@include fluid-type($min_width, $max_width, 18px, 20px);
 	}
 }
 

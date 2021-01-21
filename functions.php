@@ -45,7 +45,8 @@ if ( ! function_exists( '_s_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', '_s' ),
+				'menu-1' => esc_html__( 'Primary', 'yba' ),
+				'footer-menu' => esc_html__( 'Footer', 'yba' )
 			)
 		);
 
@@ -171,6 +172,7 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
      add_post_type_support( 'reviews', 'excerpt' ); //change page with your post type slug.
 }
+
 
 /**
  * Implement the Custom Header feature.

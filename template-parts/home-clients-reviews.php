@@ -9,7 +9,9 @@
 					<?php
 
                         $reviews = array(
-                            'post_type'=> 'reviews'
+                            'post_type'=> 'reviews',
+                            'posts_per_page' => 3,
+                            'orderby'        => 'rand',
                         );    
                         
                         $your_query = new WP_Query( $reviews );

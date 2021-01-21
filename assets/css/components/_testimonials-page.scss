@@ -1,0 +1,79 @@
+.clients-reviews-feed {
+	.single-review {
+		// width: 33%;
+		margin: 1em;
+		padding: 2em 6em;
+		display: flex;
+		border-bottom: 1px solid #ccc;
+
+		@media screen and (max-width: 992px) {
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			padding: 4em 0em;
+		}
+	}
+
+	// .client-avatar {
+	// 	position: relative;
+	// 	width: 200px;
+	// 	overflow: hidden;
+	// }
+
+	.client-avatar {
+		margin-right: 2em;
+	}
+
+	.client-img {
+		// position: absolute;
+		height: 250px;
+		background-size: contain;
+		background-position: center;
+		width: 250px;
+		border-radius: 100%;
+		margin: 0 0 3em 0;
+		display: inline-table;
+		// left: 50%;
+		// transform: translateX(-50%);
+	}
+
+	.client-review {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		border: 3px solid $color_text-light;
+		border-radius: 25px;
+		padding: 1.5em;
+		margin-bottom: 2em;
+		color: $color_text-dark;
+		@include fluid-type($min_width, $max_width, 14px, 18px);
+		position: relative;
+
+		a {
+			align-self: flex-end;
+		}
+
+		p {
+			font-weight: 300;
+			margin-top: 0;
+			@include fluid-type($min_width, $max_width, 16px, 18px);
+		}
+	}
+
+	.client-signature {
+		padding: 0 2em;
+
+		a {
+			color: #2ba6cb;
+			@include fluid-type($min_width, $max_width, 20px, 22px);
+		}
+
+		p {
+			margin-bottom: 1em;
+			margin-top: 0em;
+			color: $color_text-dark;
+			@include fluid-type($min_width, $max_width, 18px, 20px);
+		}
+	}
+}

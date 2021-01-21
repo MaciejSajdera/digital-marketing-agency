@@ -4,7 +4,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
+	color: $color_text-light;
 	font-family: $font_general;
 	@include font-size(1);
 	line-height: $font__line-height-body;
@@ -38,6 +38,13 @@ h2 {
 	font-family: $font_headers;
 	font-weight: 700;
 	@include fluid-type($min_width, $max_width, 64px, 70px);
+}
+
+h4 {
+	text-transform: uppercase;
+	font-family: $font__main;
+	font-weight: 400;
+	@include fluid-type($min_width, $max_width, 24px, 28px);
 }
 
 h5 {

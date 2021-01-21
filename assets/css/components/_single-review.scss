@@ -1,0 +1,7 @@
+.single-review {
+	color: $color_text-dark;
+
+	h1 {
+		@include fluid-type($min_width, $max_width, 64px, 70px);
+	}
+}

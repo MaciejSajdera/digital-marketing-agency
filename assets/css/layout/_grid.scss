@@ -12,3 +12,27 @@
 	display: flex;
 	flex-flow: column;
 }
+
+.flex-wrapper {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-between {
+	justify-content: space-between;
+}
+
+.review-text-wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+}

@@ -2,7 +2,7 @@
 
     <div class="section-header">
         <span class="text-colored up-title">some of</span>
-        <h2>Our Awards</h2>
+        <h2 class="text-dark">Our Awards</h2>
     </div>
 
             <!-- Slider main container -->

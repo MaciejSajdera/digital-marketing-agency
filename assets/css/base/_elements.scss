@@ -44,6 +44,7 @@ figure {
 a {
 	color: $color__link;
 	text-decoration: none;
+	cursor: pointer;
 
 	// &:visited {
 	// 	color: $color__link-visited;
@@ -155,14 +156,46 @@ table {
 	text-transform: uppercase;
 	font-weight: 700;
 	text-align: center;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
 	// white-space: nowrap;
+}
+
+.orange-oval-button-outline {
+	background: transparent;
+	color: $color_main-theme;
+	border-radius: 100rem;
+	border: 3px solid $color_main-theme;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	// white-space: nowrap;
+	margin: auto;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+
+	&:hover {
+		background: $color_main-theme;
+		color: $color_text-light;
+	}
 }
 
 .orange-oval-button {
 	background: $color_main-theme;
 	color: $color_text-light;
 	border-radius: 100rem;
-	padding: 1em 1.5em;
+	padding: 0.5em 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	// white-space: nowrap;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+}
+
+.orange-oval-button-menu a {
+	background: $color_main-theme;
+	color: $color_text-light;
+	border-radius: 100rem;
+	padding: 0.5em 1.5em;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;

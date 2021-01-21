@@ -264,6 +264,10 @@
 		}
 	}
 
+	p {
+		color: $color_text-dark;
+	}
+
 	.advantage-box {
 		display: flex;
 		flex-flow: column;
@@ -285,6 +289,14 @@
 	}
 }
 
+.section-why-us {
+	display: flex;
+	flex-flow: column;
+	p {
+		color: $color_text-dark;
+	}
+}
+
 .why-us-container {
 	img {
 		margin-bottom: 1.5em;
@@ -299,5 +311,14 @@
 		p {
 			padding: 0 2em;
 		}
+	}
+}
+
+.section-book-in-call {
+	background: $background_graphite;
+	margin-bottom: 1em;
+
+	h4 {
+		margin-bottom: 1em;
 	}
 }

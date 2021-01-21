@@ -35,7 +35,7 @@ global $wp_query;
 	</div>
 
 	<header id="masthead" class="site-header" style="background-image: url(<?php
-	 if (get_the_post_thumbnail_url()) : echo get_the_post_thumbnail_url(); endif;
+	 if (get_the_post_thumbnail_url(8)) : echo get_the_post_thumbnail_url(8); endif;
 	?>)";
 	>
 	
