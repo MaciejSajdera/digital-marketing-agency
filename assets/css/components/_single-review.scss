@@ -4,4 +4,73 @@
 	h1 {
 		@include fluid-type($min_width, $max_width, 64px, 70px);
 	}
+
+	.entry-header {
+		display: flex;
+		flex-flow: column;
+
+		@media screen and (min-width: 992px) {
+			flex-flow: row;
+		}
+
+		.single-review__header {
+			width: 100%;
+			text-align: center;
+
+			@media screen and (min-width: 992px) {
+				width: 70%;
+				text-align: left;
+			}
+
+			p {
+				width: 100%;
+			}
+
+			.single-review__date {
+				svg {
+					width: 1.5em;
+					height: 1.5em;
+					margin: 0 4px;
+				}
+
+				span {
+					border-bottom: 2px solid $color_main-theme;
+					padding: 0.5em 0;
+				}
+			}
+		}
+
+		.post-thumbnail {
+			width: 100%;
+			text-align: center;
+
+			@media screen and (min-width: 992px) {
+				text-align: right;
+				width: 30%;
+			}
+
+			img {
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&__content {
+		@media screen and (min-width: 992px) {
+			width: 70%;
+		}
+	}
+
+	&__recent-posts {
+		width: 30%;
+	}
+}
+
+.client-review-title {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	@include fluid-type($min_width, $max_width, 18px, 20px);
 }

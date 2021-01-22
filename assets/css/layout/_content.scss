@@ -46,10 +46,19 @@
 	display: block;
 }
 
-section,
-article {
-	@media screen and (min-width: 1200px) {
+section {
+	padding: 4em 1em 4em 1em;
+
+	@media screen and (min-width: 992px) {
 		padding: 4em 10em 4em 10em;
+	}
+}
+
+article {
+	padding: 4em 1em 4em 1em;
+
+	@media screen and (min-width: 992px) {
+		padding: 4em 20em 4em 20em;
 	}
 }
 
@@ -61,4 +70,8 @@ article {
 	svg {
 		margin-right: 0.5em;
 	}
+}
+
+.entry-content p {
+	@include fluid-type($min_width, $max_width, 16px, 18px);
 }
