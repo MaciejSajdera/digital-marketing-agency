@@ -1,3 +1,11 @@
+section.whyus-ingriedents {
+	padding: 60px 1em 4em 1em;
+
+	@media screen and (min-width: 992px) {
+		padding: 4em 10em 4em 10em;
+	}
+}
+
 .section-why-us-welcome {
 	display: flex;
 	flex-flow: column;
@@ -30,30 +38,29 @@
 	}
 }
 
-.whyus-ingriedents {
-	p {
-		color: $color_dark-grey;
-	}
-}
-
 .ingredient-wrapper:first-of-type {
 	background: $background_graphite;
 }
 
-.ingredient-wrapper:nth-of-type(2) {
+.ingredient-wrapper:nth-of-type(3) {
 	background: $color_main-theme;
 }
 
-.ingredient-wrapper:nth-of-type(3) {
+.ingredient-wrapper:nth-of-type(5) {
 	background: $background_dark-grey;
 	color: $color_dark-grey;
 }
 
 .ingredient-wrapper {
-	padding: 3em 5em;
+	padding: 2em 2em;
+	position: relative;
+
+	@media screen and (min-width: 992px) {
+		padding: 3em 5em;
+	}
 
 	.ingredient-upper {
-		padding: 2em;
+		padding: 2em 2em 0;
 		display: flex;
 
 		@media screen and (max-width: 992px) {
@@ -66,15 +73,28 @@
 			justify-content: space-between;
 		}
 
-		.ingredient-title__numeric {
-			font-size: 6.25em;
+		.ingredient-title {
+			display: flex;
 
+			span:nth-of-type(1) {
+				line-height: 0.8;
+			}
+
+			span:nth-of-type(2) {
+				line-height: 1.2;
+			}
+		}
+
+		.ingredient-title__numeric {
+			font-size: 7em;
+			font-weight: 700;
 			font-family: $font_headers;
-			color: $color_main-theme;
 		}
 
 		.ingredient-title__text {
-			@include fluid-type($min_width, $max_width, 24px, 28px);
+			@include fluid-type($min_width, $max_width, 26px, 32px);
+			width: 5em;
+			margin-left: 1em;
 		}
 	}
 
@@ -86,12 +106,72 @@
 		}
 
 		.ingredient-content {
-			width: 60%;
-			padding: 2em;
+			padding: 0 2em 2em;
+
+			@media screen and (min-width: 992px) {
+				width: 60%;
+			}
+
+			p {
+				@include fluid-type($min_width, $max_width, 16px, 18px);
+			}
 		}
 
-		.ingredient-video {
-			width: 40%;
+		.video-part {
+			padding: 2em;
 		}
 	}
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	margin: auto;
+}
+
+.arrow-down__graphite {
+	border-top: 50px solid $background_graphite;
+}
+
+.arrow-down__bg-body {
+	border-top: 50px solid $color__background-body;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.arrow-down__main-theme {
+	border-top: 50px solid $color_main-theme;
+}
+
+.arrow-down__dark-grey {
+	border-top: 50px solid $background_dark-grey;
+}
+
+.apply-banner {
+	padding: 2em 2em;
+	position: relative;
+
+	@media screen and (min-width: 992px) {
+		padding: 8em 16em;
+	}
+
+	text-align: center;
+
+	p {
+		@include fluid-type($min_width, $max_width, 16px, 18px);
+	}
+}
+
+.whyus-main {
+	.section-book-in-call {
+		margin-bottom: 0;
+	}
+}
+
+.why-us-form {
+	background-color: $background_dark-grey;
 }

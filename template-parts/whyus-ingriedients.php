@@ -6,14 +6,12 @@ $ingredients = get_field('ingredients');
 
 
 <section class="whyus-ingriedents">
-    <p>We’re an agency with big hearts, a robust reliable service and a reputation for driving incredible results. Our reputation has been built on just <strong><span class="text-colored uppercase">THREE INGREDIENTS:</span></strong></p>
-
-
+    <p  class="divider-title text-dark">We’re an agency with big hearts, a robust reliable service and a reputation for driving incredible results. Our reputation has been built on just <strong><span class="text-colored uppercase">THREE INGREDIENTS:</span></strong></p>
 
     <div class="ingredient-wrapper">
         <div class="ingredient-upper">
             <div class="ingredient-title">
-                <span class="ingredient-title__numeric">1</span>
+                <span class="ingredient-title__numeric text-colored">1</span>
 
                 <span class="ingredient-title__text"><?php echo $ingredients["ingredient_title_1"]?> </span>
                 
@@ -26,7 +24,7 @@ $ingredients = get_field('ingredients');
         <div class="ingredient-main">
             
             <div class="ingredient-content">
-                <?php echo $ingredients["ingredient_content_1"]?>
+                <p class="text-light"><?php echo $ingredients["ingredient_content_1"]?></p>
             </div>
 
                 <div class="video-part">
@@ -37,10 +35,10 @@ $ingredients = get_field('ingredients');
                                                     <!-- Modal content -->
                                                     <div class="modal-content">
                 
-                                                    <div id="player">
-                                                        <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_1'] ?></span>
-                                                        <span id="myIframe"></span>
-                                                    </div>
+                                                        <div id="player">
+                                                            <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_1'] ?></span>
+                                                            <span id="myIframe"></span>
+                                                        </div>
                                                         
                                                     </div>
                                             </div>
@@ -51,12 +49,13 @@ $ingredients = get_field('ingredients');
         </div>
     </div>
 
-
+    <div class="arrow-down arrow-down__graphite"></div>
 
     <div class="ingredient-wrapper">
+    <div class="arrow-down arrow-down__bg-body"></div>
         <div class="ingredient-upper">
             <div class="ingredient-title">
-                <span class="ingredient-title__numeric">2</span>
+                <span class="ingredient-title__numeric text-dark">2</span>
 
                 <span class="ingredient-title__text"><?php echo $ingredients["ingredient_title_2"]?></span>
                 
@@ -69,7 +68,7 @@ $ingredients = get_field('ingredients');
         <div class="ingredient-main">
 
             <div class="ingredient-content">
-            <?php echo $ingredients["ingredient_content_2"]?>
+            <p class="text-light"><?php echo $ingredients["ingredient_content_2"]?></p>
             </div>
 
             <div class="video-part">
@@ -80,10 +79,10 @@ $ingredients = get_field('ingredients');
                                                         <!-- Modal content -->
                                                         <div class="modal-content">
                     
-                                                        <div id="player">
-                                                            <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_2'] ?></span>
-                                                            <span id="myIframe"></span>
-                                                        </div>
+                                                            <div id="player">
+                                                                <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_2'] ?></span>
+                                                                <span id="myIframe"></span>
+                                                            </div>
                                                             
                                                         </div>
                                                 </div>
@@ -93,11 +92,13 @@ $ingredients = get_field('ingredients');
         </div>
     </div>
 
+    <div class="arrow-down arrow-down__main-theme"></div>
 
     <div class="ingredient-wrapper">
+    <div class="arrow-down arrow-down__bg-body"></div>
         <div class="ingredient-upper">
             <div class="ingredient-title">
-                <span class="ingredient-title__numeric">3</span>
+                <span class="ingredient-title__numeric text-dark">3</span>
 
                 <span class="ingredient-title__text"><?php echo $ingredients["ingredient_title_3"]?> </span>
                 
@@ -110,7 +111,7 @@ $ingredients = get_field('ingredients');
         <div class="ingredient-main">
 
             <div class="ingredient-content">
-                <?php echo $ingredients["ingredient_content_3"]?>
+                <p class="text-dark"><?php echo $ingredients["ingredient_content_3"]?></p>
             </div>
 
             <div class="video-part">
@@ -121,19 +122,24 @@ $ingredients = get_field('ingredients');
                                                         <!-- Modal content -->
                                                         <div class="modal-content">
                     
-                                                        <div id="player">
-                                                            <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_3'] ?></span>
-                                                            <span id="myIframe"></span>
-                                                        </div>
+                                                            <div id="player">
+                                                                <span id="ytLink" style="display:none;"><?php echo $ingredients['ingredient_video_link_3'] ?></span>
+                                                                <span id="myIframe"></span>
+                                                            </div>
                                                             
                                                         </div>
                                                 </div>
 
                     </div>
-                </div>
+            </div>
 
         </div>
     </div>
 
+    <div class="arrow-down arrow-down__dark-grey"></div>
+
+    <?php
+			get_template_part( 'template-parts/whyus-apply-banner', 'page' );
+	?>
 
 </section>

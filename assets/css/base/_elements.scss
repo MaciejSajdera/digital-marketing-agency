@@ -292,3 +292,18 @@ table {
 .modal-closed {
 	display: none;
 }
+
+.divider-title {
+	@include fluid-type($min_width, $max_width, 20px, 24px);
+	text-align: center;
+	margin: 0;
+	padding-bottom: 60px;
+}
+
+.regular-paragraph {
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+}
+
+.text-centered {
+	text-align: center;
+}
