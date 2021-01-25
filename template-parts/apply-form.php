@@ -11,5 +11,7 @@
         If your PPC spend is more than £1k per month pop your details below and we’ll arrange a quick initial call with Laura to see if there’s a fit for us to help you, and we’ll be in touch re giving the best free PPC audit in the UK.
     </p>
 
-    <?php echo do_shortcode( '[contact-form-7 id="6"]' ); ?>
+    <?php echo do_shortcode( '[contact-form-7 id="202"]' ); ?>
+
+    <span class="text-dark">We will collect, use and protect your data in accordance with our <span class="text-colored">Privacy Policy</span>.</span>
 </section>

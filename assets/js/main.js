@@ -1,16 +1,65 @@
 /**
  * Main JavaScript file.
  */
-import Navigation from "./navigation.js";
 import skipLinkFocus from "./skip-link-focus-fix.js";
 
+import { directionHover, isElementInViewport } from "./helperFunctions";
+
 document.addEventListener("DOMContentLoaded", () => {
-	const navigation = new Navigation();
+	const myPreloader = document.querySelector(".my-preloader");
+	const page = document.querySelector("#page");
 
-	skipLinkFocus();
+	setTimeout(() => {
+		myPreloader.classList.add("my-preloader-off");
+	}, 500);
 
-	navigation.setupNavigation();
-	navigation.enableTouchFocus();
+	setTimeout(() => {
+		myPreloader.classList.add("my-preloader-none");
+		page.classList.add("page-loaded");
+		const cookieInfoText = document.querySelector("#cookie-text").innerHTML;
+
+		let cookieLaw = {
+			dId: "cookie-law-div",
+			bId: "cookie-law-button",
+			iId: "cookie-law-item",
+			show: function(e) {
+				if (localStorage.getItem(cookieLaw.iId)) {
+					return !1;
+				} else {
+					var o = document.createElement("div"),
+						i = document.createElement("p"),
+						t = document.createElement("button");
+					t.classList.add("orange-oval-button");
+					(i.innerHTML = e.msg),
+						(t.id = cookieLaw.bId),
+						(t.innerHTML = e.ok),
+						(o.id = cookieLaw.dId),
+						o.appendChild(t),
+						o.appendChild(i),
+						document.body.insertBefore(o, document.body.lastChild),
+						t.addEventListener("click", cookieLaw.hide, !1);
+				}
+			},
+
+			hide: function() {
+				document
+					.getElementById(cookieLaw.dId)
+					.classList.add("cookie-law-accepted"),
+					localStorage.setItem(cookieLaw.iId, "1");
+			}
+		};
+		cookieLaw.show({
+			msg: cookieInfoText ? cookieInfoText : "text",
+			ok: "ACCEPT"
+		});
+	}, 600);
+
+	const allPrimaryMenuItems = document.querySelectorAll("#primary-menu > li");
+
+	if (allPrimaryMenuItems) {
+		const linksToDirectionHover = [].slice.call(allPrimaryMenuItems, 0);
+		linksToDirectionHover.forEach(node => new directionHover(node));
+	}
 
 	function getId(url) {
 		const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;

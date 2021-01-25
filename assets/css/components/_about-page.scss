@@ -38,8 +38,10 @@
 	padding-top: 0;
 
 	.about-story {
-		width: 50%;
 		padding: 0 2em;
+		@media screen and (min-width: 992px) {
+			width: 50%;
+		}
 
 		h4 {
 			text-transform: initial;

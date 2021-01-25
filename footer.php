@@ -8,7 +8,7 @@
  *
  * @package _s
  */
-
+$cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 ?>
 
 	</div><!-- #content -->
@@ -54,6 +54,9 @@
             	<a href="/privacy-policy/">Privacy Policy</a>
 		</p>
 		<p>Unit 5, 40 Coldharbour Lane, Harpenden, Herts, AL5 4UN</p>
+			<div id="cookie-text">
+			<p><?php echo $cookie_info ?></p>
+			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

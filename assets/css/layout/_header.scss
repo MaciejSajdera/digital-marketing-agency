@@ -1,13 +1,14 @@
 .apply-button {
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 992px) {
 		display: none;
 	}
 }
 
 .apply-button-short {
 	display: none;
+	margin-right: 2em;
 
-	@media screen and (min-width: 480px) and (max-width: 1024px) {
+	@media screen and (max-width: 992px) {
 		display: block;
 	}
 }

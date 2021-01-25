@@ -1,10 +1,28 @@
-<section class="section-welcome" style="
-  background:url(<?php echo get_field('background_image_2') ?>), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(<?php echo get_field('background_image_1') ?>);
- background-size: 750px, 100%, cover;
- background-repeat: no-repeat;
+<section class="section-welcome">
+ <style>
 
- 
- background-color: #e1e1e1;background-position: right bottom;">
+        
+        .section-welcome {
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(<?php echo get_field('background_image_1') ?>);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #e1e1e1;
+            background-position: right bottom;
+        }
+
+        @media screen and (min-width: 992px) { 
+            .section-welcome {
+            background:url(<?php echo get_field('background_image_2') ?>), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(<?php echo get_field('background_image_1') ?>);
+            background-size: 750px, 100%, cover;
+            background-repeat: no-repeat;
+            background-color: #e1e1e1;
+            background-position: right bottom;
+        }
+        }
+
+ </style>
+
+    <span id="" style="display: none"> <?php echo get_field('background_image_1') ?> </span>
     <div class="wrapper-flex-column">
         <div class="wrapper-flex-column welcome-text">
             <span class="up-title">RESULTS FOCUSED</span>
@@ -15,7 +33,7 @@
         <div class="wrapper-flex awards-promo-wrapper">
 
             <a class="orange-oval-button">Learn more</a>
-            <div class="wrapper-flex-row awards-promo-banner">
+            <div class="flex-wrapper awards-promo-banner">
             <?php 
 
             $args = array(

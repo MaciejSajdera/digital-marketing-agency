@@ -1,6 +1,13 @@
 footer {
 	background: $background_graphite;
-	padding: 4em 10em;
+
+	@media screen and (min-width: 992px) {
+		padding: 4em 2em;
+	}
+
+	@media screen and (min-width: 1400px) {
+		padding: 4em 10em;
+	}
 
 	.footer-upper {
 		display: flex;

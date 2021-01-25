@@ -135,6 +135,164 @@ table {
 	text-align: center;
 }
 
+.my-preloader {
+	height: 100vh;
+	position: fixed;
+	width: 100vw;
+	background: white;
+	z-index: 99999;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease-in;
+	opacity: 1;
+	top: 0;
+
+	.preloader-content {
+		background: url(../dist/img/yba-loader.png) no-repeat;
+		display: block;
+		height: 10em;
+		width: 10em;
+		background-size: contain;
+		animation: mymove 1.5s infinite;
+	}
+}
+
+@keyframes mymove {
+	0% {
+		transform: scale(1.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+		opacity: 0;
+	}
+}
+
+.my-preloader-off {
+	opacity: 0;
+}
+
+.my-preloader-none {
+	display: none;
+}
+
+#page {
+	opacity: 0;
+}
+
+.page-loaded {
+	opacity: 1 !important;
+	transition: all 0.3s ease-in;
+}
+
+#cookie-law-div {
+	z-index: 10000000;
+	opacity: 0;
+	transition: all 0.3s ease-in 0s;
+	position: fixed;
+	width: 100%;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	padding: 1em 5em;
+	border-radius: 0;
+	background: $color__background-body;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	font-size: 15px;
+	box-shadow: rgba(23, 43, 99, 0.4) 0px 7px 28px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row-reverse;
+	animation: cookieInfoUp 1s forwards;
+
+	transition: all 0.3s ease-in-out;
+
+	@media screen and (max-width: 992px) {
+		border-radius: 0;
+		max-width: 100%;
+		width: 100%;
+		right: 0;
+		bottom: 0;
+		flex-flow: column-reverse;
+	}
+
+	@keyframes cookieInfoUp {
+		0% {
+			transform: translate(-50%, 100%);
+			opacity: 0;
+		}
+
+		90% {
+			transform: translate(-50%, 0%);
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate(-50%, 0%);
+			opacity: 1;
+		}
+	}
+}
+
+.cookie-law-accepted {
+	transform: translate(-50%, 100%) !important;
+	opacity: 0 !important;
+}
+
+#cookie-law-div a {
+	font-size: 15px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+#cookie-law-div a:hover {
+	opacity: 0.7;
+}
+#cookie-law-div p {
+	margin: 0;
+	color: $color_text-dark;
+
+	@media screen and (max-width: 992px) {
+		text-align: center;
+	}
+}
+
+#cookie-law-div button {
+	align-self: center;
+	line-height: 40px;
+	height: 40px;
+	white-space: nowrap;
+	color: #fff;
+	background-color: $color_main-theme;
+	border: none;
+	// opacity: 0.6;
+	font-size: 12px;
+	cursor: pointer;
+	border-radius: 50px;
+	margin: auto 2em;
+	transition: all 0.3s ease-in-out;
+	padding: 0 2em !important;
+
+	@media screen and (max-width: 992px) {
+		margin: 1em auto auto;
+	}
+}
+#cookie-law-div button:hover {
+	opacity: 1;
+}
+
+#cookie-text {
+	display: none;
+}
+
 .white-oval-button {
 	background: $color_text-light;
 	color: $color_text-dark;
@@ -145,6 +303,25 @@ table {
 	text-align: center;
 	// white-space: nowrap;
 	@include fluid-type($min_width, $max_width, 10px, 18px);
+
+	transition: all 0.3s ease-in-out;
+
+	svg {
+		path {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&:hover {
+		background: $color_text-dark;
+		color: $color_text-light;
+
+		svg {
+			path:nth-of-type(2) {
+				fill: $color_text-light;
+			}
+		}
+	}
 }
 
 .white-oval-button-outline {
@@ -172,6 +349,7 @@ table {
 	// white-space: nowrap;
 	margin: auto;
 	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		background: $color_main-theme;
@@ -181,6 +359,7 @@ table {
 
 .orange-oval-button {
 	background: $color_main-theme;
+	border: 2px solid $color_main-theme;
 	color: $color_text-light;
 	border-radius: 100rem;
 	padding: 0.5em 1.5em;
@@ -189,10 +368,34 @@ table {
 	font-weight: 700;
 	// white-space: nowrap;
 	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: transparent;
+	}
+}
+
+.orange-oval-button-overwrite {
+	background: $color_main-theme !important;
+	border: 2px solid $color_main-theme !important;
+	color: $color_text-light !important;
+	border-radius: 100rem !important;
+	padding: 0.5em 1.5em;
+	text-align: center !important;
+	text-transform: uppercase !important;
+	font-weight: 700 !important;
+	// white-space: nowrap;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: transparent;
+	}
 }
 
 .orange-oval-button-menu a {
 	background: $color_main-theme;
+	border: 2px solid $color_main-theme;
 	color: $color_text-light;
 	border-radius: 100rem;
 	padding: 0.5em 1.5em;
@@ -201,6 +404,11 @@ table {
 	font-weight: 700;
 	// white-space: nowrap;
 	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: transparent;
+	}
 }
 
 .dark-oval-button {
@@ -278,11 +486,14 @@ table {
 	height: 95%;
 }
 
-@media screen and (max-width: 1000px) {
-	iframe {
-		width: auto;
-		height: auto;
+iframe {
+	@media screen and (max-width: 992px) {
+		width: 90vw;
+		height: 70vh;
 	}
+
+	width: 70vw;
+	height: 70vh;
 }
 
 .modal-opened {

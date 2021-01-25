@@ -26,8 +26,13 @@ section.whyus-ingriedents {
 	// }
 
 	&__header {
+		justify-content: space-around;
 		@media screen and (min-width: 992px) {
 			width: 50%;
+		}
+
+		p {
+			@include fluid-type($min_width, $max_width, 22px, 26px);
 		}
 	}
 
@@ -174,4 +179,123 @@ section.whyus-ingriedents {
 
 .why-us-form {
 	background-color: $background_dark-grey;
+
+	.wpcf7-form {
+		input {
+			width: 100%;
+			padding: 1em;
+			color: $color_dark-grey;
+			border: 1px solid #ccc;
+		}
+
+		p {
+			color: $color_dark-grey;
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+
+		textarea {
+			padding: 1em;
+		}
+
+		.wpcf7-acceptance {
+			input[type="checkbox"] {
+				position: relative;
+				cursor: pointer;
+				padding: 0;
+				margin-right: 15px;
+				width: 40px;
+				transform: translateY(-0.5em);
+			}
+			input[type="checkbox"]:before {
+				content: "";
+				margin-right: 10px;
+				display: inline-block;
+				margin-top: -2px;
+				width: 35px;
+				height: 35px;
+				background: $background_dark-grey;
+				border: 2px solid $color_main-theme;
+				border-radius: 100%;
+			}
+
+			input[type="checkbox"]:checked:before {
+				background: $color_main-theme;
+				border-color: $color_main-theme;
+			}
+			input[type="checkbox"]:disabled {
+				color: #b8b8b8;
+				cursor: auto;
+			}
+			input[type="checkbox"]:disabled:before {
+				box-shadow: none;
+				background: #ddd;
+			}
+			input[type="checkbox"]:checked:after {
+				content: "";
+				position: absolute;
+				left: 12px;
+				top: 14px;
+				background: white;
+				width: 3px;
+				height: 3px;
+				box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+					4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+				transform: rotate(45deg);
+			}
+
+			span.wpcf7-list-item {
+				margin: 20px 0 0 0;
+			}
+
+			.wpcf7-list-item-label {
+				font-size: 1.15em;
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1em;
+
+			// p:nth-of-type(2) {
+			// 	border: 1px solid pink;
+			// }
+
+			p:nth-of-type(5) {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+
+			p:nth-of-type(6) {
+				grid-column-start: 1;
+				grid-column-end: 3;
+
+				label {
+					display: flex;
+					align-items: center;
+				}
+			}
+
+			p:nth-of-type(7),
+			.wpcf7-response-output {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+
+			.wpcf7-submit {
+				font-size: 1.25em;
+				width: 50%;
+				cursor: pointer;
+			}
+
+			.wpcf7-response-output {
+				color: $color_text-dark;
+			}
+
+			.wpcf7-not-valid-tip {
+				margin-top: 10px;
+			}
+		}
+	}
 }

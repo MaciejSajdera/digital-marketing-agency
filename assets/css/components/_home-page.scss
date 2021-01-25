@@ -9,24 +9,51 @@
 
 	.welcome-text {
 		margin-bottom: 2em;
+		text-align: center;
+
+		@media screen and (min-width: 992px) {
+			text-align: left;
+		}
 
 		span {
 			padding: 1em 0;
 		}
 
 		p {
-			width: 45%;
-			@include fluid-type($min_width, $max_width, 28px, 32px);
+			@include fluid-type($min_width, $max_width, 18px, 32px);
 			line-height: 1.4em;
-			margin-top: 0em;
+			width: 100%;
+
+			@media screen and (min-width: 500px) {
+				width: 70%;
+				margin: auto;
+			}
+
+			@media screen and (min-width: 992px) {
+				margin: 0em;
+				width: 45%;
+			}
 		}
 	}
 
 	.awards-promo-wrapper {
 		margin-bottom: 1.5em;
-
 		justify-content: space-between;
 		align-items: center;
+
+		@media screen and (max-width: 1400px) {
+			flex-flow: column;
+		}
+
+		.orange-oval-button {
+			@media screen and (min-width: 992px) {
+				align-self: flex-start;
+			}
+
+			@media screen and (max-width: 1400px) {
+				margin-bottom: 2em;
+			}
+		}
 	}
 
 	.orange-oval-button {
@@ -34,18 +61,54 @@
 	}
 
 	.awards-promo-banner {
-		width: 85%;
 		justify-content: space-around;
+		width: 100%;
+
+		@media screen and (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+
+		@media screen and (min-width: 1400px) {
+			width: 85%;
+		}
+
 		&__logo {
-			margin: 0 1em;
+			margin: 0.5em 0.5em;
+
+			@media screen and (min-width: 350px) {
+				margin: 0.5em 1em;
+			}
+
+			@media screen and (min-width: 992px) {
+				margin: 0 1em;
+			}
+
+			@media screen and (max-width: 500px) {
+				&:nth-of-type(5) {
+					display: none;
+				}
+
+				&:nth-of-type(6) {
+					display: none;
+				}
+			}
+
 			img {
 				object-fit: contain;
-				height: 4em;
+				height: 3.5em;
+
+				@media screen and (max-width: 500px) {
+					height: 2.75em;
+				}
 			}
 		}
 	}
 
 	.signature {
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+
 		text-align: center;
 		align-self: flex-end;
 		// margin-top: 6em;
@@ -159,11 +222,26 @@
 .home-clients-reviews {
 	background-color: $color_main-theme;
 
+	.wrapper-flex {
+		@media screen and (max-width: 992px) {
+			align-items: center;
+		}
+	}
+
 	.single-review {
-		width: 33%;
-		margin: 1em;
 		display: flex;
 		flex-flow: column;
+
+		@media screen and (max-width: 992px) {
+			justify-content: center;
+			align-items: center;
+			margin: 4em 2em;
+		}
+
+		@media screen and (min-width: 992px) {
+			width: 33%;
+			margin: 1em;
+		}
 	}
 
 	.client-img {
@@ -175,7 +253,6 @@
 	}
 
 	.client-review {
-		height: 18em;
 		display: flex;
 		flex-flow: column;
 		justify-content: space-between;
@@ -188,6 +265,10 @@
 		@include fluid-type($min_width, $max_width, 14px, 18px);
 		position: relative;
 
+		@media screen and (min-width: 992px) {
+			height: 18em;
+		}
+
 		&:before {
 			content: "";
 			display: block;
@@ -199,6 +280,11 @@
 			border-color: transparent transparent #fff transparent;
 			border-width: 22px;
 			left: 48px;
+
+			@media screen and (max-width: 992px) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 
 		&:after {
@@ -212,10 +298,17 @@
 			border-color: transparent transparent #fd6424 transparent;
 			border-width: 20px;
 			left: 50px;
+
+			@media screen and (max-width: 992px) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 
 		p:first-child {
-			height: 8em;
+			@media screen and (min-width: 992px) {
+				height: 8em;
+			}
 		}
 
 		a {
