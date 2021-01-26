@@ -161,10 +161,11 @@
 	align-items: center;
 	position: relative;
 
-	height: 30em;
+	height: 22em;
 
 	@media screen and (min-width: 992px) {
 		width: 50%;
+		height: 30em;
 	}
 
 	#videoContainer {
@@ -191,6 +192,7 @@
 	.swiper-container {
 		overflow: hidden;
 		width: 100%;
+		z-index: 0;
 	}
 	.swiper-wrapper {
 		transition-timing-function: linear;
@@ -235,12 +237,26 @@
 		@media screen and (max-width: 992px) {
 			justify-content: center;
 			align-items: center;
-			margin: 4em 2em;
+			margin: 4em 1em;
+
+			max-width: 600px;
 		}
 
 		@media screen and (min-width: 992px) {
 			width: 33%;
 			margin: 1em;
+		}
+
+		&:hover {
+			.client-img {
+				transform: scale(1.1);
+			}
+
+			.text-light {
+				&:after {
+					width: 100%;
+				}
+			}
 		}
 	}
 
@@ -250,6 +266,11 @@
 		width: 8em;
 		border-radius: 100%;
 		margin: 0 0 3em 0;
+		transition: all 0.5s ease-in-out;
+
+		@media screen and (min-width: 992px) {
+			margin: 0 0 3em 10px;
+		}
 	}
 
 	.client-review {
@@ -265,7 +286,11 @@
 		@include fluid-type($min_width, $max_width, 14px, 18px);
 		position: relative;
 
-		@media screen and (min-width: 992px) {
+		@media screen and (min-width: 992px) and (max-width: 1200px) {
+			height: 20em;
+		}
+
+		@media screen and (min-width: 1200px) {
 			height: 18em;
 		}
 
@@ -311,14 +336,27 @@
 			}
 		}
 
-		a {
+		.text-light {
 			align-self: flex-end;
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 0%;
+				height: 1px;
+				background: $color_text-light;
+				transition: all 0.5s ease-in-out;
+			}
 		}
 	}
 
 	.client-signature {
 		background-color: $color_dark-grey;
 		padding: 0 2em;
+		width: 100%;
 
 		p {
 			margin-bottom: 1em;
@@ -338,26 +376,13 @@
 	margin-bottom: 1em;
 	align-items: flex-start;
 
-	padding: 2em 0 1em;
+	@media screen and (max-width: 992px) {
+		flex-flow: column;
+		align-items: center;
+	}
 
 	@media screen and (min-width: 992px) {
 		padding: 2em 0 0;
-	}
-
-	@media screen and (max-width: 992px) {
-		.advantage-box {
-			width: 25%;
-			padding: 0.25em;
-			img {
-				width: 30px;
-			}
-
-			.content {
-				p {
-					margin-bottom: 0.25em;
-				}
-			}
-		}
 	}
 
 	p {
@@ -369,12 +394,18 @@
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
-		width: 33%;
+
+		@media screen and (max-width: 992px) {
+			margin: 2em;
+		}
+
+		@media screen and (min-width: 992px) {
+			width: 33%;
+		}
 
 		p {
+			@include fluid-type($min_width, $max_width, 16px, 20px);
 			margin: 0.25em auto;
-			padding: 0 5em;
-			@include fluid-type($min_width, $max_width, 12px, 18px);
 			margin: 1.5em auto;
 			text-align: center;
 		}
@@ -384,8 +415,22 @@
 .section-why-us {
 	display: flex;
 	flex-flow: column;
+
+	.section-header {
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			@include fluid-type($min_width, $max_width, 18px, 22px);
+		}
+	}
+
 	p {
 		color: $color_text-dark;
+	}
+
+	.up-title {
+		text-transform: unset;
 	}
 
 	.why-us-container {
@@ -399,8 +444,18 @@
 			justify-content: center;
 			align-items: center;
 
+			h5 {
+				color: $color_text-dark;
+				text-align: center;
+				font-weight: 400;
+			}
+
 			p {
-				padding: 0 2em;
+				font-weight: 300;
+
+				@media screen and (min-width: 992px) {
+					padding: 0 2em;
+				}
 			}
 		}
 	}
@@ -409,6 +464,7 @@
 .section-book-in-call {
 	background: $background_graphite;
 	margin-bottom: 1em;
+	text-align: center;
 
 	h4 {
 		margin-bottom: 1em;

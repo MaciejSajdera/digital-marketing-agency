@@ -173,6 +173,20 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'reviews', 'excerpt' ); //change page with your post type slug.
 }
 
+/* Change excerpt length */ 
+
+function get_excerpt($limit, $source = null){
+
+    $excerpt = $source == "content" ? get_the_content() : get_the_excerpt();
+    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, $limit);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.'...';
+    return $excerpt;
+}
 
 /**
  * Implement the Custom Header feature.

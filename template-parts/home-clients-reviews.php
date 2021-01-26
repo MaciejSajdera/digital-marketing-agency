@@ -19,19 +19,19 @@
 						// "loop" through query (even though it's just one page) 
 						while ( $your_query->have_posts() ) :
 							$your_query->post_title(); $your_query->the_post();
-                            echo '<div class="single-review">';
-                                echo '<a class="blog-post client-img" href="'. get_permalink() .'" style="background-image: url(' .get_the_post_thumbnail_url(). '); background-repeat: no-repeat;"></a>';
+                            echo '<a class="single-review">';
+                                echo '<div class="blog-post client-img" href="'. get_permalink() .'" style="background-image: url(' .get_the_post_thumbnail_url(). '); background-repeat: no-repeat;"></div>';
 
                                 echo '<div class="blog-post-caption client-review">';
-                                    the_excerpt();
-                                    echo '<a class="text-light" href="'. get_permalink() .'">Read more</a>';
+                                echo '<p>' . get_excerpt(230) . '</p>';
+                                    echo '<span class="text-light" href="'. get_permalink() .'">Read more</span>';
                                 echo '</div>';
 
                                 echo '<div class="client-signature">';
                                     echo '<p class="text-colored"><strong>' . get_the_title() . '</strong><br />' . get_field("official_title") .'</p>';
                                 echo '</div>';
 
-                            echo '</div>';
+                            echo '</a>';
 				
                         endwhile;
                         // reset post data (important!)

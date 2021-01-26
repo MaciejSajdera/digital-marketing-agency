@@ -106,6 +106,7 @@ table {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
+	margin-bottom: 3em;
 
 	h2 {
 		margin-top: 0;
@@ -117,6 +118,8 @@ table {
 	@include fluid-type($min_width, $max_width, 26px, 28px);
 	font-weight: 300;
 	text-transform: uppercase;
+	margin-bottom: 0.35em;
+	display: block;
 }
 
 .text-colored {
@@ -375,6 +378,24 @@ table {
 	}
 }
 
+.orange-oval-button-scale {
+	background: $color_main-theme;
+	border: 2px solid $color_main-theme;
+	color: $color_text-light;
+	border-radius: 100rem;
+	padding: 0.5em 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	// white-space: nowrap;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
 .orange-oval-button-overwrite {
 	background: $color_main-theme !important;
 	border: 2px solid $color_main-theme !important;
@@ -421,6 +442,12 @@ table {
 	font-weight: 700;
 	// white-space: nowrap;
 	@include fluid-type($min_width, $max_width, 18px, 20px);
+	transition: all 0.3s ease-in-out;
+	border: 2px solid $color_dark-grey;
+
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 /** modal styles**/
@@ -429,7 +456,6 @@ table {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 999;
-	padding-top: 100px; /* Location of the box */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -497,7 +523,7 @@ iframe {
 }
 
 .modal-opened {
-	display: block;
+	display: flex;
 }
 
 .modal-closed {

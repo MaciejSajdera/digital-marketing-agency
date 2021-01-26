@@ -27,6 +27,11 @@ section.whyus-ingriedents {
 
 	&__header {
 		justify-content: space-around;
+
+		@media screen and (max-width: 992px) {
+			text-align: center;
+		}
+
 		@media screen and (min-width: 992px) {
 			width: 50%;
 		}
@@ -36,9 +41,20 @@ section.whyus-ingriedents {
 		}
 	}
 
-	.orange-oval-button {
+	.orange-oval-button-scale {
+		max-width: 400px;
+		margin: auto;
+
 		@media screen and (min-width: 992px) {
 			width: 70%;
+			max-width: none;
+			margin: inherit;
+		}
+	}
+
+	.video-part {
+		@media screen and (max-width: 992px) {
+			margin-top: 3em;
 		}
 	}
 }
@@ -57,7 +73,7 @@ section.whyus-ingriedents {
 }
 
 .ingredient-wrapper {
-	padding: 2em 2em;
+	padding: 5em 2em;
 	position: relative;
 
 	@media screen and (min-width: 992px) {
@@ -69,9 +85,10 @@ section.whyus-ingriedents {
 		display: flex;
 
 		@media screen and (max-width: 992px) {
-			flex-flow: column;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
+			padding: 0;
+			margin-bottom: 2em;
 		}
 
 		@media screen and (min-width: 992px) {
@@ -100,6 +117,10 @@ section.whyus-ingriedents {
 			@include fluid-type($min_width, $max_width, 26px, 32px);
 			width: 5em;
 			margin-left: 1em;
+		}
+
+		img {
+			width: 5em;
 		}
 	}
 
@@ -157,8 +178,9 @@ section.whyus-ingriedents {
 }
 
 .apply-banner {
-	padding: 2em 2em;
+	padding: 10em 2em;
 	position: relative;
+	background-position: center;
 
 	@media screen and (min-width: 992px) {
 		padding: 8em 16em;
@@ -205,7 +227,6 @@ section.whyus-ingriedents {
 				padding: 0;
 				margin-right: 15px;
 				width: 40px;
-				transform: translateY(-0.5em);
 			}
 			input[type="checkbox"]:before {
 				content: "";
@@ -246,6 +267,18 @@ section.whyus-ingriedents {
 
 			span.wpcf7-list-item {
 				margin: 20px 0 0 0;
+
+				label {
+					display: flex;
+					@media screen and (max-width: 600px) {
+						flex-flow: column;
+						align-items: center;
+						input {
+							margin-bottom: 2em;
+							margin-right: 0;
+						}
+					}
+				}
 			}
 
 			.wpcf7-list-item-label {
@@ -273,7 +306,6 @@ section.whyus-ingriedents {
 
 				label {
 					display: flex;
-					align-items: center;
 				}
 			}
 

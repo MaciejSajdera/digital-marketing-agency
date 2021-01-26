@@ -257,19 +257,19 @@ body.home {
 }
 
 .top-banner {
-	padding: 1em 5%;
+	padding: 0em 5%;
 	height: 5em;
 	position: fixed;
 	width: 100%;
-	background: $color_main-theme;
+	background: #fd743a;
 	z-index: 999;
 	align-items: center;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
-
 	align-items: center;
 	top: 0;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
 	@media screen and (min-width: 1400px) {
 		padding: 1em 15%;
@@ -287,6 +287,12 @@ body.home {
 
 		@media screen and (min-width: 992px) {
 			width: 100%;
+		}
+
+		@media screen and (max-width: 992px) {
+			a {
+				@include fluid-type($min_width, $max_width, 18px, 20px);
+			}
 		}
 	}
 
@@ -312,4 +318,156 @@ header {
 			}
 		}
 	}
+}
+
+.mobile-menu-container {
+	position: fixed;
+	top: 5em;
+	transform: translateY(-100em);
+	height: 100%;
+	width: 100%;
+	transition: all 0.4s ease-in-out;
+	background: #d85e2a;
+	z-index: 1;
+	text-align: center;
+
+	.menu-menu-1-container {
+		height: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			height: 70%;
+			display: flex;
+			flex-flow: column;
+			justify-content: space-around;
+			align-items: center;
+
+			li {
+				a {
+					@include fluid-type($min_width, $max_width, 22px, 30px);
+				}
+			}
+
+			.orange-oval-button-menu a {
+				background: $color_dark-grey;
+				color: $color_text-light;
+				border-radius: 100rem;
+				padding: 0.5em 1.5em;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 700;
+				// white-space: nowrap;
+				@include fluid-type($min_width, $max_width, 18px, 20px);
+				transition: all 0.3s ease-in-out;
+				border: 2px solid $color_dark-grey;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+}
+
+.mobile-menu-open {
+	transform: translateY(0em);
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	height: 100%;
+	position: relative;
+}
+
+//Draw a white circle outside of the menu lines and align its content div in the center
+.menu-circle {
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+//A simple wrapper for our menu lines. Once again thanks flexbox! It's really confusing to work with paddings/margins for the spacing area between lines without flexbox.
+.line-wrapper {
+	width: 50px;
+	height: 26px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+}
+
+//Our menu lines are just empty spans. We give them height, width, and display properties and poof! They appear on the screen!
+.line {
+	height: 3px;
+	width: 30px;
+	background: $color_main-theme;
+	display: block;
+	border-radius: 50px;
+	transition: all 0.3s;
+}
+
+//When the user clicks on the menu, we need to make some transformations. Rotate the first line 45 degrees, the third line -45 degrees to draw an X symbol, and throw the middle line on the left and fade it away.
+//TranslateX and TranslateY are calculated with the very sophisticated method of trial and error. Yeah I know. Since we're rotating the element, the browser thinks that the center rotates too. So you have to calculate or use some framework like Greensock for crossbrowser compatibility.
+.line-wrapper.clicked .line:nth-child(1) {
+	transform: rotate(45deg) translateY(7px) translateX(8px);
+}
+
+.line-wrapper.clicked .line:nth-child(3) {
+	transform: rotate(-45deg) translateY(-5px) translateX(6px);
+}
+
+.line-wrapper.clicked .line:nth-child(2) {
+	transform: translateX(-100%);
+	opacity: 0;
+}
+
+//Top and Left properties are declared for Firefox. Chrome/Edge are clever enough to understand that the absolute position refers to the element that comes before/after them. Firefox is one of those special kids that needs some extra help.
+.menu-circle:before,
+.menu-circle:after {
+	content: "";
+	display: block;
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	top: calc(50% - 75px);
+	left: calc(50% - 75px);
+}
+
+.menu-circle:before {
+	background: lighten($color__background-body, 25);
+	z-index: -1;
+}
+
+.menu-circle:after {
+	background: lighten($color__background-body, 20);
+	z-index: -2;
+}
+
+.menu-circle.clicked:before {
+	transform: scale(1);
+	opacity: 0;
+}
+
+.menu-circle.clicked:after {
+	transform: scale(1.75);
+	opacity: 0;
 }

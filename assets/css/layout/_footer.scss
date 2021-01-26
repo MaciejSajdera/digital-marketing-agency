@@ -1,6 +1,10 @@
 footer {
 	background: $background_graphite;
 
+	@media screen and (max-width: 992px) {
+		text-align: center;
+	}
+
 	@media screen and (min-width: 992px) {
 		padding: 4em 2em;
 	}
@@ -13,6 +17,15 @@ footer {
 		display: flex;
 		justify-content: space-between;
 
+		@media screen and (max-width: 992px) {
+			flex-flow: column;
+			padding: 3em;
+
+			.site-branding {
+				margin-bottom: 1em;
+			}
+		}
+
 		.footer-navigation {
 			display: flex;
 			flex-flow: column;
@@ -23,6 +36,30 @@ footer {
 			// .flex-wrapper {
 			// 	width: 100%;
 			// }
+
+			.menu-footer-menu-container {
+				@media screen and (max-width: 992px) {
+					display: none;
+				}
+			}
+
+			.call-us {
+				@media screen and (max-width: 992px) {
+					display: none;
+				}
+			}
+
+			.footer-contact-wrapper {
+				@media screen and (max-width: 992px) {
+					flex-flow: column;
+				}
+			}
+
+			.orange-oval-button {
+				@media screen and (max-width: 992px) {
+					margin-bottom: 1em;
+				}
+			}
 
 			ul {
 				display: flex;
@@ -41,6 +78,10 @@ footer {
 			margin: 0 2em;
 		}
 	}
+
+	p {
+		padding: 0 2em;
+	}
 }
 
 .social-buttons__wrapper a {
@@ -50,6 +91,7 @@ footer {
 	border-radius: 100%;
 	background: $color_text-light;
 	margin: 0.5em;
+	transition: 0.3s ease-in-out;
 
 	svg {
 		height: 1.5em;
@@ -58,6 +100,16 @@ footer {
 
 		path {
 			fill: $color_text-dark;
+			transition: 0.3s ease-in-out;
+		}
+	}
+
+	&:hover {
+		transform: scale(1.1);
+		svg {
+			path {
+				fill: $color_main-theme;
+			}
 		}
 	}
 }

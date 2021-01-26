@@ -14,6 +14,24 @@ $cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+								<!-- The Modal -->	
+								<div id="formModal" class="modal">
+									
+										<!-- Modal content -->
+										<div class="modal-content">
+										<span id='closeFormModal'>X</span>
+										<div id="formPopUp">
+											<p>APPLY FOR YOUR</p>
+											<p>FREE AUDIT</p>
+											<p>Simply fill in the form below to apply.
+											We'll review your information and get back to you ASAP</p>
+											<?php echo do_shortcode( '[contact-form-7 id="202"]' ); ?>
+										</div>
+											
+										</div>
+								</div>
+
+
 		<div class="site-info footer-upper">
 		
 			<div class="site-branding">
@@ -32,7 +50,7 @@ $cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 					)
 				);
 				?>
-				<div class="flex-wrapper flex-between">
+				<div class="flex-wrapper flex-between footer-contact-wrapper">
 				<a class="orange-oval-button">Contact</a>
 					<div class="flex-wrapper flex-between">
 						<a href="tel:01727298040" alt="Call YBA Now" class="white-oval-button call-us"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">

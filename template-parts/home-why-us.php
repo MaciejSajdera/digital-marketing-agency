@@ -1,13 +1,19 @@
+<?php
+$advantages = get_field('why_us');
+?>
+
 <section class="section-why-us">
             <div class="section-header">
-                <h2 class="text-dark">WHY YBA PPC?</h2>
-                <span class="text-colored up-title">We’re all about transparency, honesty & solid partnerships with the right clients.</span>
-                <p> The only metric that matters is generating you many times your investment in leads & enquiries </p>
+                <?php
+                echo '<h2 class="text-dark">'. $advantages['why_us_header_title'] . '</h2>';
+                echo '<span class="text-colored up-title">' . $advantages['why_us_subheader'] . '</span>';
+                echo '<p>' . $advantages['why_us_subheader_slogan'] . '</p>';
+                ?>
+
             </div>
 
                 <div class="advantages-container why-us-container">
                         <?php
-                        $advantages = get_field('why_us');
                         if( $advantages ): ?>
                             <div class="advantage-box">
                                 <img src="<?php echo esc_url( $advantages['why_us_image_1'] ); ?>" alt="" />

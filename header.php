@@ -42,10 +42,33 @@ global $wp_query;
 			</a>
 		</div>
 		<div class="top-banner__right">
-			burger
+			<div class="menu-container">
+				<div class="menu-circle">
+					<div class="line-wrapper">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
+
+	<div class="mobile-menu-container">
+	<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+
+			the_custom_logo();
+			?>
+
+	</div>
+
 
 	<header id="masthead" class="site-header" style="background-image: url(<?php
 	 if (get_the_post_thumbnail_url()) : echo get_the_post_thumbnail_url(); endif;

@@ -19,10 +19,18 @@
 }
 
 .about-bottom-banner {
+	@media screen and (max-width: 992px) {
+		text-align: center;
+	}
+
 	.section-header {
 		h2 {
 			text-align: left;
 			line-height: 0.8em;
+
+			@media screen and (max-width: 992px) {
+				text-align: center;
+			}
 		}
 	}
 	.up-title {

@@ -38,7 +38,7 @@ h2 {
 	font-family: $font_headers;
 	font-weight: 700;
 	line-height: 0.8em;
-	@include fluid-type($min_width, $max_width, 64px, 70px);
+	@include fluid-type($min_width, $max_width, 52px, 70px);
 }
 
 h4 {

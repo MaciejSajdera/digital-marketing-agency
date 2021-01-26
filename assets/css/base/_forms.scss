@@ -34,7 +34,6 @@ input[type="search"] {
 	padding: 3px;
 }
 
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -48,5 +47,135 @@ textarea {
 
 	&:focus {
 		color: $color__text-input-focus;
+	}
+}
+
+#formModal {
+	#closeFormModal {
+		position: absolute;
+		top: 0.5em;
+		left: 0.5em;
+		cursor: pointer;
+	}
+
+	.modal-content {
+		background: $color_main-theme;
+		display: block;
+
+		@media screen and (min-width: 992px) {
+			width: 50%;
+			height: 75%;
+		}
+
+		#formPopUp {
+			height: 100%;
+
+			.wpcf7-form {
+				input {
+					width: 100%;
+					padding: 1em;
+					color: $color_dark-grey;
+					border: 1px solid #ccc;
+				}
+
+				p {
+					color: $color_dark-grey;
+					margin-top: 0;
+					margin-bottom: 1em;
+				}
+
+				.wpcf7-acceptance {
+					input[type="checkbox"] {
+						position: relative;
+						cursor: pointer;
+						padding: 0;
+						margin-right: 5px;
+						width: 40px;
+					}
+					input[type="checkbox"]:before {
+						content: "";
+						margin-right: 10px;
+						display: inline-block;
+						margin-top: -2px;
+						width: 35px;
+						height: 35px;
+						background: $color_main-theme;
+						border: 2px solid $color_text-light;
+						border-radius: 100%;
+					}
+
+					input[type="checkbox"]:checked:before {
+						background: $color_text-light;
+						border-color: $color_text-light;
+					}
+					input[type="checkbox"]:disabled {
+						color: $color_main-theme;
+						cursor: auto;
+					}
+					input[type="checkbox"]:disabled:before {
+						box-shadow: none;
+						background: $color_main-theme;
+					}
+					input[type="checkbox"]:checked:after {
+						content: "";
+						position: absolute;
+						left: 12px;
+						top: 14px;
+						background: $color_main-theme;
+						width: 3px;
+						height: 3px;
+						box-shadow: 2px 0 0 $color_main-theme, 4px 0 0 $color_main-theme,
+							4px -2px 0 $color_main-theme, 4px -4px 0 $color_main-theme,
+							4px -6px 0 $color_main-theme, 4px -8px 0 $color_main-theme;
+						transform: rotate(45deg);
+					}
+
+					span.wpcf7-list-item {
+						margin: 20px 0 0 0;
+
+						label {
+							display: flex;
+							@media screen and (max-width: 992px) {
+								flex-flow: column;
+								justify-content: center;
+								align-items: center;
+
+								input {
+									margin-bottom: 2em;
+									margin-right: 0;
+								}
+							}
+						}
+					}
+
+					.wpcf7-list-item-label {
+						font-size: 1.15em;
+						color: $color_text-light;
+					}
+				}
+
+				.orange-oval-button-overwrite {
+					background: $color_dark-grey !important;
+					color: $color_text-light !important;
+					border-radius: 100rem !important;
+					padding: 0.5em 1.5em !important;
+					text-align: center !important;
+					text-transform: uppercase !important;
+					font-weight: 700 !important;
+					// white-space: nowrap;
+					@include fluid-type($min_width, $max_width, 18px, 20px);
+					transition: all 0.3s ease-in-out !important;
+					border: 2px solid $color_dark-grey !important;
+
+					&:hover {
+						transform: scale(1.05) !important;
+					}
+				}
+			}
+		}
+	}
+
+	textarea {
+		display: none;
 	}
 }

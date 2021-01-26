@@ -5,7 +5,7 @@
 
 <p class="text-dark">Voted <strong><span class="text-colored uppercase">Top 3% of Google Ads Agencies</span></strong> across <strong><span class="text-colored uppercase">26 countries by Google</span></strong>.</p>
 
-<a class="orange-oval-button" href="">Apply for your free audit now</a>
+<a class="orange-oval-button-scale apply-button" href="">Apply for your free audit now</a>
 
 </div>
 
