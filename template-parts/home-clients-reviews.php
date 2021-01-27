@@ -19,12 +19,12 @@
 						// "loop" through query (even though it's just one page) 
 						while ( $your_query->have_posts() ) :
 							$your_query->post_title(); $your_query->the_post();
-                            echo '<a class="single-review">';
-                                echo '<div class="blog-post client-img" href="'. get_permalink() .'" style="background-image: url(' .get_the_post_thumbnail_url(). '); background-repeat: no-repeat;"></div>';
+                            echo '<a href="'. get_permalink() .'" class="single-review">';
+                                echo '<div class="blog-post client-img"  style="background-image: url(' .get_the_post_thumbnail_url(). '); background-repeat: no-repeat;"></div>';
 
                                 echo '<div class="blog-post-caption client-review">';
-                                echo '<p>' . get_excerpt(230) . '</p>';
-                                    echo '<span class="text-light" href="'. get_permalink() .'">Read more</span>';
+                                echo '<p>' . get_excerpt(230, 'content') . '</p>';
+                                    echo '<span class="text-light">Read more</span>';
                                 echo '</div>';
 
                                 echo '<div class="client-signature">';

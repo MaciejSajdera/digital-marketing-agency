@@ -1,0 +1,50 @@
+.case-studies-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 3em;
+}
+
+.single-case-study {
+	display: block;
+	height: 30em;
+	transition: all 0.3s ease-in-out;
+
+	h3 {
+		padding: 1em 0;
+	}
+
+	p {
+		margin: 0;
+		padding-bottom: 1em;
+		padding: 1em;
+	}
+
+	&__thumbnail {
+		height: 50%;
+		background-size: cover;
+		transition: all 0.3s ease-in-out;
+		position: relative;
+
+		.animated-border-overlay {
+			border: 15px solid #fff;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			-webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+			transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+		}
+	}
+
+	&__text {
+		padding: 1em;
+	}
+
+	&:hover {
+		box-shadow: 0 3px 22px 1px rgba(0, 0, 0, 0.08);
+
+		.animated-border-overlay {
+			border-width: 0;
+		}
+	}
+}

@@ -4,7 +4,6 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color_text-light;
 	font-family: $font_general;
 	@include font-size(1);
 	line-height: $font__line-height-body;
@@ -53,6 +52,27 @@ h5 {
 	font-family: $font_general;
 	font-weight: 300;
 	@include fluid-type($min_width, $max_width, 22px, 24px);
+}
+
+.form-pop-up__upperheader {
+	text-transform: uppercase;
+	@include fluid-type($min_width, $max_width, 20px, 22px);
+	margin-bottom: 0.5em;
+}
+
+.form-pop-up__header {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: $font_headers;
+	font-weight: 700;
+	line-height: 0.8em;
+	@include fluid-type($min_width, $max_width, 52px, 70px);
+}
+
+.form-pop-up__bottomheader {
+	width: 65%;
+	margin: auto;
+	margin-bottom: 1em;
 }
 
 /* COPY */

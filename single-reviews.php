@@ -19,7 +19,7 @@ get_header('single-review');
 
 			get_template_part( 'template-parts/content-single-review', get_post_type() );
 
-			the_post_navigation();
+			get_template_part( 'template-parts/post-navigation', get_post_type() );
 
 
 		endwhile; // End of the loop.

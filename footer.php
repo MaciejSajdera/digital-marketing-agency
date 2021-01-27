@@ -25,9 +25,9 @@ $cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 												</svg>
 											</span>
 										<div id="formPopUp">
-											<p>APPLY FOR YOUR</p>
-											<p>FREE AUDIT</p>
-											<p>Simply fill in the form below to apply.
+											<p class="form-pop-up__upperheader text-light text-centered">APPLY FOR YOUR</p>
+											<p class="form-pop-up__header text-darkest text-centered">FREE AUDIT</p>
+											<p class="form-pop-up__bottomheader text-light text-centered">Simply fill in the form below to apply.
 											We'll review your information and get back to you ASAP</p>
 											<?php echo do_shortcode( '[contact-form-7 id="202"]' ); ?>
 										</div>
@@ -72,10 +72,10 @@ $cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 			</div>
 
 		</div><!-- .site-info -->
-		<p class="copyright">© 2021 YBA PPC <span>|</span>
-            	<a href="/privacy-policy/">Privacy Policy</a>
+		<p class="text-light copyright">© 2021 YBA PPC <span>|</span>
+            	<a class="text-light" href="/privacy-policy/">Privacy Policy</a>
 		</p>
-		<p>Unit 5, 40 Coldharbour Lane, Harpenden, Herts, AL5 4UN</p>
+		<p class="text-light">Unit 5, 40 Coldharbour Lane, Harpenden, Herts, AL5 4UN</p>
 			<div id="cookie-text">
 			<p><?php echo $cookie_info ?></p>
 			</div>

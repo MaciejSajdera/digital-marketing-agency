@@ -71,8 +71,8 @@ global $wp_query;
 
 
 	<header id="masthead" class="site-header" style="background-image: url(<?php
-	 if (get_the_post_thumbnail_url()) : echo get_the_post_thumbnail_url(); endif;
-	?>); background-repeat: no-repeat";
+	 if (wp_get_attachment_url( get_post_thumbnail_id(get_option( 'page_for_posts' )))) : echo wp_get_attachment_url( get_post_thumbnail_id(get_option( 'page_for_posts' )) ); endif;
+	?>)";
 	>
 	
 		<div class="site-branding">
@@ -95,3 +95,6 @@ global $wp_query;
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+
+

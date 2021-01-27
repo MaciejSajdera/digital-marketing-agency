@@ -68,10 +68,10 @@ a {
 
 /* LISTS */
 
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
+// ul,
+// ol {
+// 	margin: 0 0 1.5em 3em;
+// }
 
 ul {
 	list-style: disc;
@@ -136,6 +136,10 @@ table {
 
 .text-dark {
 	color: $color_text-dark;
+}
+
+.text-darkest {
+	color: $color_text-darkest;
 }
 
 .txt-centered {
@@ -382,6 +386,25 @@ table {
 	}
 }
 
+.orange-oval-button-blog {
+	background: $color_main-theme;
+	border: 2px solid $color_main-theme;
+	color: $color_text-light;
+	border-radius: 100rem;
+	padding: 0.5em 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	// white-space: nowrap;
+	@include fluid-type($min_width, $max_width, 16px, 18px);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: transparent;
+		color: $color_main-theme;
+	}
+}
+
 .orange-oval-button-scale {
 	background: $color_main-theme;
 	border: 2px solid $color_main-theme;
@@ -410,7 +433,7 @@ table {
 	text-transform: uppercase !important;
 	font-weight: 700 !important;
 	// white-space: nowrap;
-	@include fluid-type($min_width, $max_width, 16px, 18px);
+	@include fluid-type($min_width, $max_width, 11px, 18px);
 	transition: all 0.3s ease-in-out;
 
 	&:hover {

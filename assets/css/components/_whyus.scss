@@ -18,13 +18,6 @@ section.whyus-ingriedents {
 		flex-flow: row;
 	}
 
-	// #myIframe {
-	// 	iframe {
-	// 		height: 40em;
-	// 		width: 77em;
-	// 	}
-	// }
-
 	&__header {
 		justify-content: space-around;
 
@@ -61,10 +54,12 @@ section.whyus-ingriedents {
 
 .ingredient-wrapper:first-of-type {
 	background: $background_graphite;
+	color: $color_text-light;
 }
 
 .ingredient-wrapper:nth-of-type(3) {
 	background: $color_main-theme;
+	color: $color_text-light;
 }
 
 .ingredient-wrapper:nth-of-type(5) {
@@ -119,7 +114,7 @@ section.whyus-ingriedents {
 		}
 
 		.ingredient-title__text {
-			@include fluid-type($min_width, $max_width, 26px, 32px);
+			@include fluid-type($min_width, $max_width, 22px, 32px);
 			width: 5em;
 			margin-left: 1em;
 		}
@@ -290,6 +285,13 @@ section.whyus-ingriedents {
 
 			.wpcf7-list-item-label {
 				font-size: 1.15em;
+				cursor: pointer;
+			}
+		}
+
+		.wpcf7-submit {
+			@media screen and (max-width: 992px) {
+				max-width: 400px;
 			}
 		}
 

@@ -33,6 +33,7 @@
 
 			a {
 				width: 200px;
+				color: $color_text-light;
 			}
 
 			:hover > a,
@@ -90,6 +91,10 @@
 			&:before {
 				display: none;
 			}
+		}
+
+		a {
+			color: $color_text-light;
 		}
 	}
 
@@ -357,6 +362,7 @@ header {
 			li {
 				a {
 					@include fluid-type($min_width, $max_width, 22px, 30px);
+					color: $color_text-light;
 				}
 			}
 
