@@ -106,7 +106,11 @@ table {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
+
+	@media screen and (min-width: 992px) {
+		margin-bottom: 3em;
+	}
 
 	h2 {
 		margin-top: 0;
@@ -522,6 +526,29 @@ iframe {
 	height: 70vh;
 }
 
+#player {
+	position: relative;
+}
+
+#myIframe {
+	display: block;
+	position: relative;
+}
+
+.close-modal {
+	position: absolute;
+	top: -2em;
+	right: -2em;
+	background: rgba(0, 0, 0, 0.7);
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	/* text-align: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .modal-opened {
 	display: flex;
 }
@@ -535,6 +562,10 @@ iframe {
 	text-align: center;
 	margin: 0;
 	padding-bottom: 60px;
+
+	@media screen and (max-width: 992px) {
+		padding: 1em;
+	}
 }
 
 .regular-paragraph {

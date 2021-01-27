@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const mobileMenuContainer = document.querySelector(
 			".mobile-menu-container"
 		);
+
 		mobileMenuContainer.classList.toggle("mobile-menu-open");
 	});
 
@@ -98,11 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				myEmbedLink
 					? (iframeMarkup =
-							'<iframe width="560" height="315" src="//www.youtube.com/embed/' +
+							'<iframe src="//www.youtube.com/embed/' +
 							myEmbedLink +
 							'" frameborder="0" allowfullscreen></iframe>')
 					: (iframeMarkup =
-							'<iframe width="560" height="315" src="' +
+							'<iframe src="' +
 							myUrl +
 							'" frameborder="0" allowfullscreen></iframe>');
 
@@ -151,7 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	formModal.addEventListener("click", e => {
 		console.log(e.target);
-		e.target === formModal.querySelector("#closeFormModal") ? closeModal() : "";
+		e.target === formModal.querySelector("#closeFormModal") ||
+		e.target === formModal.querySelector("#closeFormModal svg") ||
+		e.target === formModal.querySelector("#closeFormModal path")
+			? closeModal()
+			: "";
 	});
 
 	const closeModal = () => {

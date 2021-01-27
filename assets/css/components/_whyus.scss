@@ -1,5 +1,5 @@
 section.whyus-ingriedents {
-	padding: 60px 1em 4em 1em;
+	padding: 0 0em 4em 0em;
 
 	@media screen and (min-width: 992px) {
 		padding: 4em 10em 4em 10em;
@@ -81,22 +81,27 @@ section.whyus-ingriedents {
 	}
 
 	.ingredient-upper {
-		padding: 2em 2em 0;
 		display: flex;
+		justify-content: space-between;
 
-		@media screen and (max-width: 992px) {
-			justify-content: space-between;
+		@media screen and (max-width: 500px) {
 			align-items: center;
 			padding: 0;
-			margin-bottom: 2em;
+			margin-bottom: 1em;
+			flex-flow: column;
 		}
 
-		@media screen and (min-width: 992px) {
-			justify-content: space-between;
+		@media screen and (min-width: 1300px) {
+			padding: 2em 2em 0;
 		}
 
 		.ingredient-title {
 			display: flex;
+
+			@media screen and (max-width: 992px) {
+				align-self: flex-start;
+				margin-bottom: 1em;
+			}
 
 			span:nth-of-type(1) {
 				line-height: 0.8;
@@ -127,15 +132,14 @@ section.whyus-ingriedents {
 	.ingredient-main {
 		display: flex;
 
-		@media screen and (max-width: 992px) {
+		@media screen and (max-width: 1300px) {
 			flex-flow: column;
 		}
 
 		.ingredient-content {
-			padding: 0 2em 2em;
-
-			@media screen and (min-width: 992px) {
+			@media screen and (min-width: 1300px) {
 				width: 60%;
+				padding: 0 2em 2em;
 			}
 
 			p {
@@ -145,6 +149,9 @@ section.whyus-ingriedents {
 
 		.video-part {
 			padding: 2em;
+			@media screen and (max-width: 1300px) {
+				width: 100%;
+			}
 		}
 	}
 }

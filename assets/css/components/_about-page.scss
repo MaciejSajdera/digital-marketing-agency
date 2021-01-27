@@ -1,19 +1,36 @@
 .about-welcome {
 	background: $background_graphite;
 
+	margin-bottom: 0;
+
 	@media screen and (min-width: 992px) {
 		padding: 4em 10em 10em 10em;
 	}
 
 	&__image {
-		transform: translateY(-10em);
 		display: flex;
+
+		@media screen and (max-width: 992px) {
+			padding: 0 0 2em 0;
+		}
+
+		@media screen and (min-width: 992px) {
+			transform: translateY(-10em);
+		}
 
 		img {
 			margin: auto;
-			object-fit: contain;
+			object-fit: cover;
 			width: 100%;
 			max-width: 100%;
+
+			@media screen and (max-width: 992px) {
+				height: 22em;
+			}
+
+			@media screen and (min-width: 992px) {
+				object-fit: contain;
+			}
 		}
 	}
 }
@@ -40,14 +57,19 @@
 
 .about-content {
 	color: $color_text-dark;
-	margin-top: -10em;
+
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 0;
 
+	@media screen and (min-width: 992px) {
+		margin-top: -10em;
+		padding-bottom: 0;
+	}
+
 	.about-story {
-		padding: 0 2em;
 		@media screen and (min-width: 992px) {
+			padding: 0 2em;
 			width: 50%;
 		}
 

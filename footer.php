@@ -19,7 +19,11 @@ $cookie_info = get_field('cookie_info', get_option( 'page_on_front' ));
 									
 										<!-- Modal content -->
 										<div class="modal-content">
-										<span id='closeFormModal'>X</span>
+										<span id='closeFormModal' class="close-modal">
+												<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+												<path fill="#fd6424" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+												</svg>
+											</span>
 										<div id="formPopUp">
 											<p>APPLY FOR YOUR</p>
 											<p>FREE AUDIT</p>

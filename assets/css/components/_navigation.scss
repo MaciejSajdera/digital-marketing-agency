@@ -215,9 +215,15 @@
 body.home {
 	.site-header {
 		position: absolute;
-		top: 4em;
+		top: 5em;
 		margin-top: 0;
 	}
+}
+
+.mobile-header-menu-open {
+	position: absolute !important;
+	top: 4em !important;
+	margin-top: 0 !important;
 }
 
 .site-header {
@@ -228,7 +234,7 @@ body.home {
 	width: 100%;
 	background-position: bottom;
 	position: static;
-	margin-top: 4em;
+	margin-top: 5em;
 
 	@media screen and (min-width: 992px) {
 		padding: 4em 2em;
@@ -322,8 +328,8 @@ header {
 
 .mobile-menu-container {
 	position: fixed;
-	top: 5em;
 	transform: translateY(-100em);
+	top: 0;
 	height: 100%;
 	width: 100%;
 	transition: all 0.4s ease-in-out;
@@ -332,7 +338,7 @@ header {
 	text-align: center;
 
 	.menu-menu-1-container {
-		height: 80%;
+		height: 85%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -340,6 +346,7 @@ header {
 		ul {
 			list-style: none;
 			margin: 0;
+			margin-top: 3em;
 			padding: 0;
 			height: 70%;
 			display: flex;
@@ -370,6 +377,10 @@ header {
 					transform: scale(1.05);
 				}
 			}
+		}
+
+		.custom-logo-link {
+			max-width: 150px;
 		}
 	}
 }

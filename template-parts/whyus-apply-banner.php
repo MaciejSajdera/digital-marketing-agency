@@ -8,7 +8,7 @@
         <p class="text-light">
         <?php echo $apply_now["content"] ?>
         </p>
-        <a class="orange-oval-button" href="">
+        <a class="orange-oval-button apply-button" href="">
         <?php echo $apply_now["button"] ?>
         </a>
 

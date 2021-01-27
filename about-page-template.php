@@ -10,7 +10,7 @@ global $post;
 
 get_header();
 ?>
-	<main id="primary" class="home-main">
+	<main id="primary" class="page-about">
 
 		<?php
 			get_template_part( 'template-parts/about-welcome', 'page' );
