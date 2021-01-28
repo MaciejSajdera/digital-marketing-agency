@@ -36,7 +36,7 @@ h2 {
 	text-transform: uppercase;
 	font-family: $font_headers;
 	font-weight: 700;
-	line-height: 0.8em;
+	line-height: 1;
 	@include fluid-type($min_width, $max_width, 52px, 70px);
 }
 

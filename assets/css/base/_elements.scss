@@ -598,3 +598,10 @@ iframe {
 .text-centered {
 	text-align: center;
 }
+
+.small-header {
+	text-transform: uppercase;
+	color: $color_dark-grey;
+	font-weight: 600;
+	@include fluid-type($min_width, $max_width, 14px, 16px);
+}

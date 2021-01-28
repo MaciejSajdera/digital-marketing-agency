@@ -168,11 +168,18 @@ function defer_parsing_of_js( $url ) {
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 
-add_action( 'init', 'my_add_excerpts_to_pages' );
+add_filter( 'user_can_richedit' , '__return_false', 50 );
+
+
 function my_add_excerpts_to_pages() {
 	 add_post_type_support( 'reviews', 'excerpt' ); //change page with your post type slug.
-	 add_post_type_support( 'case_studies', 'excerpt' ); 
 }
+add_action( 'init', 'my_add_excerpts_to_pages' );
+
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'case_studies', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 /* Change excerpt length */ 
 
